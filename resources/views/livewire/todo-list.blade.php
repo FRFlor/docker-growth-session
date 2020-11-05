@@ -1,4 +1,4 @@
-<div class="h-screen">
+<div>
     <h1 class="text-3xl text-center my-10">Todo List</h1>
     <livewire:create-task />
     <ul class="max-w-3xl mx-auto mb-24 mt-8">

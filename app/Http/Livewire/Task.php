@@ -19,4 +19,9 @@ class Task extends Component
         $this->task->delete();
         $this->emit('task-deleted', $this->task->id);
     }
+
+    public function toggleIsComplete()
+    {
+        $this->task->update(['is_complete' => ! $this->task->is_complete]);
+    }
 }
