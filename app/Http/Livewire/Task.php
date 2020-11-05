@@ -16,7 +16,7 @@ class Task extends Component
 
     public function delete()
     {
-        $this->emit('task-deleted', $this->task->id);
         $this->task->delete();
+        $this->emit('task-deleted', $this->task->id);
     }
 }
