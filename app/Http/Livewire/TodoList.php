@@ -11,7 +11,8 @@ class TodoList extends Component
     public Collection $tasks;
 
     protected $listeners = [
-        'task-deleted' => 'refreshList'
+        'task-deleted' => 'refreshList',
+        'task-created' => 'refreshList',
     ];
 
     public function render()
@@ -22,6 +23,6 @@ class TodoList extends Component
 
     public function refreshList()
     {
-        $this->tasks = Task::all();
+        $this->tasks = Task::query()->orderByDesc('id')->get();
     }
 }
